@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background: url('../images/forest.png') no-repeat center center fixed;
+    background: url('../images/Forest.png') no-repeat center center fixed;
     background-size: cover;
     overflow-y: auto;
     text-align: center;

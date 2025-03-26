@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background: url('../images/Forest.png') no-repeat center center fixed;
+    background: url('../images/forest.png') no-repeat center center fixed;
     background-size: cover;
     overflow-y: auto;
     text-align: center;
@@ -149,4 +149,73 @@ body.index .container {
 
 .btn:active, .chapter-buttons a:active {
     transform: scale(0.95);
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.gallery-container img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Popup за уголемяване */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.4);
+}
+
+.extra-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 60px; /* Премества бутоните надолу */
+}
+
+.extra-buttons .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.extra-buttons .btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.extra-buttons {
+    margin-top: 60px;
 }

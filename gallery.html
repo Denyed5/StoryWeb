@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерия</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="mist"></div>
+
+    <div class="container">
+        <h1 class="title">Галерия</h1>
+
+        <div class="gallery-container">
+            <img src="images/Forest_Path.png" alt="Forest Path" onclick="openModal(this)">
+            <img src="images/Behind_2.png" alt="Behind Trees" onclick="openModal(this)">
+            <img src="images/Village.png" alt="Village" onclick="openModal(this)">
+            <img src="images/Alter_room.png" alt="Altar Room" onclick="openModal(this)">
+            <img src="images/Final_Passage.png" alt="Final Passage" onclick="openModal(this)">
+            <img src="images/Ethan.png" alt="Ethan" onclick="openModal(this)">
+            <img src="images/Elias.png" alt="Elias" onclick="openModal(this)">
+            <img src="images/Isaac.png" alt="Isaac" onclick="openModal(this)">
+	    <img src="images/Behind_3.png" alt="Final Passage" onclick="openModal(this)">
+            <img src="images/Isaac2.png" alt="Ethan" onclick="openModal(this)">
+            <img src="images/Forest2.png" alt="Elias" onclick="openModal(this)">
+            <img src="images/Forest.png" alt="Isaac" onclick="openModal(this)">
+        </div>
+
+        <div class="navigation">
+            <a class="btn" href="index.html">← Начало</a>
+        </div>
+    </div>
+
+    <!-- Popup за уголемяване -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

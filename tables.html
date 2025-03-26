@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Таблици</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      background: url('images/forest.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: 'IM Fell English SC', serif;
+    }
+
+    .overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 3rem;
+      text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
+      animation: fade-in 2s ease-in-out;
+      margin-bottom: 60px;
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 50px;
+    }
+
+    th, td {
+      border: 1px solid white;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .navigation a {
+      font-size: 1.3rem;
+      padding: 12px 24px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .navigation a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+<div class="page-title">Таблици</div>
+  <div class="overlay"></div>
+  <div class="container">
+
+    <h2>Таблица 1: Герои</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Име на герой</th>
+          <th>Визуално описание на герой</th>
+          <th>Бележки за героя (тук сложете и името на инструмента, с който сте генерирали изображението)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Исак Търнър</td><td>Възрастен човек на приблизително 60 години, ловец, с пушка.</td><td>Генериран със Stable Diffusion</td></tr>
+        <tr><td>Итан Търнър</td><td>Млад човек на около 18-20 години, с ловни дрехи и екипировка.</td><td>Генериран със Stable Diffusion</td></tr>
+        <tr><td>Елиас Грейсън</td><td>Потаен човек, облечен в тъмни дрехи, криещ се из сенките. На около 50 години, живее в гората.</td><td>Генериран със Stable Diffusion</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Таблица 2: Места</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Име на място</th>
+          <th>Визуално описание на място</th>
+          <th>Бележки за мястото (тук сложете и името на инструмента, с който сте генерирали изображението)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Гората</td><td>Мъглива гора с високи, основно широколистни дървета.</td><td>Генерирано със Stable Diffusion</td></tr>
+        <tr><td>Селото</td><td>Мрачно, малко и изоставено населено място. Мъгливо посред гората. </td><td>Генерирано със Stable Diffusion</td></tr>
+        <tr><td>Пещерата</td><td>Мрачна пещера изпълнена с силна мистична енергия.</td><td>Генерирано със Stable Diffusion</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Таблица 3: Обратна връзка</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Стъпка</th>
+          <th>Колко трудно ви беше да изпълните задачите?<br>Трудност от 1 до 10, където 1 е най-лесно, 10 е най-трудно.</th>
+          <th>Бележки (неща, които искате да споделите за особеностите по време на изпълнение на дадената стъпка).</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1. Създаване на герои и места</td><td>3</td><td>Местата и героите бяха лесни за създаване.</td></tr>
+        <tr><td>2. Създаване на историята</td><td>7</td><td>Генерирането на историята беше по-трудно, понеже трябваше да се редактират части от нея, където ИИ я е генерирал неправилно, смислено и граматически.</td></tr>
+        <tr><td>3. Създаване на сайта</td><td>5</td><td>При създаването на сайта нямаше много трудности. Срещнах затруднения при създаването на механизма за движение на страницата нагоре и надолу, както и избора на бутони.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="navigation">
+      <a href="index.html">Начало</a>
+    </div>
+  </div>
+</body>
+</html>
